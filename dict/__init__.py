@@ -40,7 +40,7 @@ except ImportError:
 class Dict:  # 字典类
     key = '716426270'  # 密码
     keyFrom = 'wufeifei'  # 用户名
-    api = 'http://fanyi.youdao.com/openapi.do' \  
+    api = 'http://fanyi.youdao.com/openapi.do'  \
           '?keyfrom=wufeifei&key=716426270&type=data&doctype=json&version=1.1&q='  # api接口(现在不完整)
     content = None  # 变量定义.其实是先起个名字,留着备用
 
@@ -162,6 +162,9 @@ if __name__ == '__main__':  # 使用本程序运行的话,直接调用main方法
 
     '''
 程序中存在的问题:
+43行:
+    \ 后面不能有空格
+
 120行:
     if re.match('[ \u4e00 -\u9fa5]+', p['key']) is None: 
     去掉里面的空格, [\u4e00-\u9fa5]
